@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Termos e Politicas de Privacidade app Lobbo</title>
+  <title>Visualizador de PDF</title>
   <style>
     body {
       margin: 0;
@@ -65,11 +65,11 @@
 </head>
 <body>
   <div class="container">
-    <h1>Termos e Politicas de Privacidade app Lobbo</h1>
+    <h1>Termos e Política de Privacidade</h1>
 
     <div class="btn-group">
-      <button onclick="showPDF(1)">Termos e condições</button>
-      <button onclick="showPDF(2)">Políticas de Privacidade</button>
+      <button onclick="showPDF('lobbo_terms.pdf')">Termos de Cuidado</button>
+      <button onclick="showPDF('lobbo_privacy.pdf')">Política de Privacidade</button>
     </div>
 
     <div class="pdf-container">
@@ -81,17 +81,9 @@
   </div>
 
   <script>
-    function showPDF(pdfIndex) {
-      var pdfPath;
-      var downloadLink;
-      
-      if (pdfIndex === 1) {
-        pdfPath = "lobbo_terms.pdf";
-        downloadLink = "lobbo_terms.pdf";
-      } else if (pdfIndex === 2) {
-        pdfPath = "lobbo_privacy.pdf";
-        downloadLink = "lobbo_privacy.pdf";
-      } 
+    function showPDF(pdfFilename) {
+      var pdfPath = pdfFilename;
+      var downloadLink = pdfFilename;
 
       var pdfObject = document.getElementById("pdf-object");
       var pdfDownloadLink = document.getElementById("pdf-download-link");
