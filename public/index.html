@@ -1,33 +1,37 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Politica de Privacidade App Lobbo</title>
-  <h2>Termos e Condições de Uso App Lobbo</h2>
+  <title>Visualizador de PDF</title>
   <style>
     body {
       margin: 0;
       overflow: hidden;
     }
 
-    #pdf-container {
+    .pdf-container {
       position: absolute;
       top: 0;
       left: 0;
-      width: 100%;
+      width: 50%;
       height: 100%;
     }
 
-    #pdf-object {
+    .pdf-object {
       width: 100%;
       height: 100%;
     }
   </style>
 </head>
 <body>
-  <div id="pdf-container">
-    <object id="pdf-object" data="lobbo_privacy.pdf" type="application/pdf">
+  <div class="pdf-container">
+    <object class="pdf-object" data="lobbo_terms.pdf" type="application/pdf">
+      
+    </object>
+  </div>
+
+  <div class="pdf-container" style="left: 50%;">
+    <object class="pdf-object" data="lobbo_privacy.pdf" type="application/pdf">
+      
     </object>
   </div>
 </body>
